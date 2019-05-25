@@ -1,20 +1,46 @@
 <html>
+
 <head>
-    <link rel="stylesheet" href="https://get.mavo.io/mavo.css"/>
-    <script src="https://get.mavo.io/mavo.js"></script>
+	<link rel="stylesheet" href="https://get.mavo.io/mavo.css" />
+	<script src="https://get.mavo.io/mavo.js">
+
+	</script>
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+
+	<!-- UIkit JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js">
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js">
+
+	</script>
 </head>
+
 <body>
-<div mv-app="nameDemo" mv-storage="https://github.com/resistdesign/mavo-test" mv-autosave="1">
-    Hobbies:
-    <ul>
-        <li property="hobby" mv-multiple>Eating</li>
-    </ul>
-    Pets
-    <article property="pet" mv-multiple>
-    <h1 property="name">Adam Catlace</h1>
-        Born on
-    <time property="birthday" datetime="2014-06-01">1 Jun 2014</time>
-</article>
-</div>
+	<div uk-alert>
+		<a class="uk-alert-close" uk-close></a>
+		This is a Mavo Test app.
+	</div>
+	<hr class="uk-divider-icon">
+	<div class="uk-container" mv-app="nameDemo" mv-storage="https://github.com/resistdesign/mavo-test" mv-autosave="1">
+		Hobbies:
+		<ul class="uk-list">
+			<li property="hobby" mv-multiple>Eating</li>
+		</ul>
+		Pets
+		<table class="uk-table">
+			<tbody>
+				<tr property="pet" mv-multiple>
+					<td property="name">Adam Catlace</td>
+					<td>
+						Born on:&nbsp;
+						<time property="birthday" datetime="2014-06-01">1 Jun 2014</time>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </body>
+
 </html>
